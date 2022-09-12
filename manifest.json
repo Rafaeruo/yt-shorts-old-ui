@@ -1,0 +1,17 @@
+{
+  "name": "YouTube Shorts Old UI",
+  "description": "Makes so YouTube Shorts videos are played in the regular desktop player instead od the new UI.",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["/script.js"]
+    }
+  ],
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["webNavigation", "tabs"],
+  "host_permissions": ["https://www.youtube.com/*"]
+}
